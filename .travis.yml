@@ -64,7 +64,7 @@ script:
   - sudo fc-cache -f -v
   - cd ~/algorithm-exercise/
   #- gitbook build ./
-  - gitbook pdf ./
+  - FC_DEBUG=5 gitbook pdf ./
   - gitbook epub ./
   - gitbook mobi ./
   # clear CJK fonts(CJK fonts suffer in fontconfig :(
