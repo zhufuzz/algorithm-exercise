@@ -44,7 +44,10 @@ script:
   - cd ~/raw_fonts
   - unzip -o NotoSans-unhinted.zip
   - mv -t ~/.fonts/noto *.otf
+  - fc-match -a Arial
+  - fc-match -a sans-serif
   - echo "remove serif fonts"
+  - ls -ahl /usr/share/fonts/*/*/*erif*
   - rm /usr/share/fonts/*/*/*erif*
   - sudo fc-cache -f -v
   - cd ~/algorithm-exercise/
@@ -113,3 +116,4 @@ branches:
 branches:
   only:
     - master
+    - test
